@@ -1,0 +1,1 @@
+COPY Public. "Usuario" FROM 'C:\temp\csv_teste.csv' DELIMITER ',' CSV HEADER;
