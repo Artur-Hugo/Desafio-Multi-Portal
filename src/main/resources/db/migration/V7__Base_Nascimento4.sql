@@ -1,0 +1,1 @@
+UPDATE usuario SET nascimento = concat(nascimento,(2021 - idade)); 
