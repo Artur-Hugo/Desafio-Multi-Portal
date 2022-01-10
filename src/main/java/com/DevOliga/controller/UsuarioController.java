@@ -23,6 +23,8 @@ public class UsuarioController {
 		ModelAndView mv = new ModelAndView("usuario");
 		mv.addObject("usuario", new Usuario());
 		mv.addObject("usuarios", service.getPersonagem());
+		mv.addObject("male", service.getCountMale());
+		mv.addObject("female", service.findAllCountSexoFemale());
 	
 		
 		return mv;

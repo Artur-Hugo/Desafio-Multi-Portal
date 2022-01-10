@@ -19,6 +19,14 @@ public class UsuarioService {
 	
 	
 	public List<Usuario> getPersonagem(){
-		return repository.findAll();
+		return repository.findAllByOrderByNome();
+	}
+	
+	public int getCountMale(){
+		return repository.findAllCountSexoMale();
+	}
+	
+	public int findAllCountSexoFemale() {
+		return repository.findAllCountSexoFemale();
 	}
 }
