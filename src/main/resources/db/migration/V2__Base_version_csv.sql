@@ -1,1 +1,1 @@
-COPY Public. "Usuario" FROM 'C:\temp\csv_teste.csv' DELIMITER ',' CSV HEADER;
+COPY public. "usuario" FROM 'C:\temp\csv_teste.csv' DELIMITER ',' CSV HEADER;

@@ -1,1 +1,1 @@
-create table public. "Usuario"(Nome varchar(50), UltimoNome Varchar(50), email varchar(50), sexo varchar(6), IpAcesso varchar(100), idade int, Nascimento varchar(100) )
+create table public. "usuario"( Nome varchar(50), UltimoNome Varchar(50), email varchar(50), sexo varchar(6), IpAcesso varchar(100), idade int, Nascimento varchar(100) )
