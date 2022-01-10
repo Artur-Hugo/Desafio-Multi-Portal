@@ -26,6 +26,19 @@ public class Usuario {
 	private int idade;
 	
 	private String nascimento;
+	
+	public Usuario() {}
+
+	public Usuario(String nome, String ultimonome, String email, String sexo, String ipacesso, int idade,
+			String nascimento) {
+		this.nome = nome;
+		this.ultimonome = ultimonome;
+		this.email = email;
+		this.sexo = sexo;
+		this.ipacesso = ipacesso;
+		this.idade = idade;
+		this.nascimento = nascimento;
+	}
 
 	public String getNome() {
 		return nome;
