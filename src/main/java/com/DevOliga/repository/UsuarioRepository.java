@@ -17,4 +17,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 	@Query(value="select count(nome) from usuario where sexo like 'Female'",nativeQuery=true)
 	public int findAllCountSexoFemale();
 	
+	@Query(value="SELECT round(AVG(idade),0)  from usuario where sexo like 'Female'",nativeQuery=true)
+	public int mediaMulherIdade();
+	
+	@Query(value="SELECT round(AVG(idade),0)  from usuario where sexo like 'Male'",nativeQuery=true)
+	public int mediaHomemIdade();
 }

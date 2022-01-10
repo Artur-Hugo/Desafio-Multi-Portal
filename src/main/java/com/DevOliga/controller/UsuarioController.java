@@ -25,6 +25,9 @@ public class UsuarioController {
 		mv.addObject("usuarios", service.getPersonagem());
 		mv.addObject("male", service.getCountMale());
 		mv.addObject("female", service.findAllCountSexoFemale());
+		mv.addObject("mediaIdadeMulher", service.mediaMulherIdade());
+		mv.addObject("mediaIdadeHomem", service.mediaHomemIdade());
+		
 	
 		
 		return mv;

@@ -29,4 +29,12 @@ public class UsuarioService {
 	public int findAllCountSexoFemale() {
 		return repository.findAllCountSexoFemale();
 	}
+	
+	public int mediaHomemIdade() {
+		return repository.mediaHomemIdade();
+	}
+	
+	public int mediaMulherIdade() {
+		return repository.mediaMulherIdade();
+	}
 }
