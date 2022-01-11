@@ -28,15 +28,14 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService service;
 	
-	@Autowired
-	private ServletContext context;
+	
 	
 	@GetMapping("/personagens")
 	public ModelAndView getPersonagem() {
 		
 		ModelAndView mv = new ModelAndView("usuario");
 		mv.addObject("usuario", new Usuario());
-		mv.addObject("usuarios", service.getPersonagem());
+		mv.addObject("usuarios", service.getUsuarios());
 		mv.addObject("male", service.getCountMale());
 		mv.addObject("female", service.findAllCountSexoFemale());
 		mv.addObject("mediaIdadeMulher", service.mediaMulherIdade());
@@ -46,7 +45,7 @@ public class UsuarioController {
 		
 		return mv;
 	}
-	
+	/*
 	@GetMapping(value="/createCsv22")
 	public void createCsv(HttpServletRequest request, HttpServletResponse response) {
 		
@@ -56,7 +55,7 @@ public class UsuarioController {
 			String fullPath = request.getServletContext().getRealPath("/resources/reports/"+"usuario");
 			service.filedownload(fullPath, response, "usuario.csv");
 		}
-	}
+	} */
 	
 	
 	@GetMapping("/createCsv")
@@ -71,6 +70,20 @@ public class UsuarioController {
 	  }
 
 	
+	
+	///Implementações futuras
+	
+	/*
+	@GetMapping(value="/createCsv22")
+	public void createCsv(HttpServletRequest request, HttpServletResponse response) {
+		
+		List<Usuario> users = service.getPersonagem();
+		boolean isFlag = service.createCSV(users, context);
+		if(isFlag) {
+			String fullPath = request.getServletContext().getRealPath("/resources/reports/"+"usuario");
+			service.filedownload(fullPath, response, "usuario.csv");
+		}
+	} */
 	
 	/*
 	 @GetMapping("/download")

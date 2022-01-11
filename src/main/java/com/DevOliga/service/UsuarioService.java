@@ -35,7 +35,7 @@ public class UsuarioService {
 	private ServletContext context;
 	
 	
-	public List<Usuario> getPersonagem(){
+	public List<Usuario> getUsuarios(){
 		return repository.findAllByOrderByNome();
 	}
 	
@@ -54,6 +54,9 @@ public class UsuarioService {
 	public int mediaMulherIdade() {
 		return repository.mediaMulherIdade();
 	}
+	
+	
+	/*
 	
 	public boolean createCSV(List<Usuario> usuarios, ServletContext context) {
 		String filePath = context.getRealPath("/resources/reports");
@@ -77,7 +80,7 @@ public class UsuarioService {
 		}catch(Exception e) {
 			return false;
 		}
-	}
+	} */
 	
 	
 	public ByteArrayInputStream load() {
@@ -85,7 +88,11 @@ public class UsuarioService {
 
 	    ByteArrayInputStream in = CSVHelper.tutorialsToCSV(tutorials);
 	    return in;
-	  } 
+	  }
+	
+	
+	///Implementações futuras
+	
 	/*
 	public boolean createCSV(List<Usuario> usuarios, ServletRequestContext context ) {
 		
@@ -95,7 +102,7 @@ public class UsuarioService {
 	
 	
 	
-	
+	/*
 	public void filedownload(String fullPath, HttpServletResponse response, String fileName) {
 		File file = new File(fullPath);
 		final int BUFFER_SIZE = 4096;
@@ -125,5 +132,5 @@ public class UsuarioService {
 	
 	
 	
-	}
+	} */
 }
