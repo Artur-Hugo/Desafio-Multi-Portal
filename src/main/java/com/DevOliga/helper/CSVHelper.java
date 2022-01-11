@@ -78,6 +78,13 @@ public class CSVHelper {
 
 	    try (ByteArrayOutputStream out = new ByteArrayOutputStream();
 	        CSVPrinter csvPrinter = new CSVPrinter(new PrintWriter(out), format);) {
+		    
+		    List<String> data1 = Arrays.asList(
+	    			"Nome", "UltimoNome", "Email", "Sexo", "IpAcesso", "Idade", "Nascimento"
+	    			);
+	    	 csvPrinter.printRecord(data1);
+		    
+		    
 	      for (Usuario usuario : usuarios) {
 	        List<String> data = Arrays.asList(
 	        		usuario.getNome(),
